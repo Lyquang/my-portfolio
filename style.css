@@ -18,7 +18,7 @@
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .2);
 }
-
+ /* khi bôi den  */
 *::selection {
     background: var(--main-color);
     color: var(--bg-color);
@@ -31,14 +31,17 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size:60%;
+    /* font-size: 62.5%; */
     overflow-x: hidden;
 }
 
 body {
     background: var(--bg-color);
     color: var(--text-color);
-}
+
+} 
+/* 1730 5770 */
 
 .header {
     position: fixed;
@@ -49,13 +52,13 @@ body {
     background: transparent;
     display: flex;
     align-items: center;
-    z-index: 100;
-    transition: .5s;
+    z-index: 50;
+    transition: 0.5s;
 }
 
 .header.sticky {
-    background: var(--bg-color);
-    box-shadow: 0 .1rem 1rem var(--shadow-color);
+    background: var(--bg-color );
+    box-shadow: 1rem .1rem 1rem var(--shadow-color);
 }
 
 .logo {
@@ -193,6 +196,7 @@ section {
     height: 100vh;
     overflow: hidden;
     pointer-events: none;
+    /* border: none var(--bg-color); */
 }
 
 .home .profession-container .profession-box {
@@ -204,7 +208,13 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: professionRotate 13s ease-out infinite;
+    /* animation: professionRotate 13s ease-out infinite; */
+    animation-name: professionRotate;
+    animation-duration: 10s;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    /* border: solid black; */
 }
 
 @keyframes professionRotate {
@@ -241,20 +251,24 @@ section {
     align-items: center;
     flex-direction: column;
     color: var(--main-color);
+    /* quay vong tron truc profession */
     transform: rotate(calc(360deg / 4 * var(--i)));
-    transform-origin: 384px;
+    transform-origin: 394px;
     background: var(--bg-color);
     padding: 13px 0;
+    /* border: solid black; */
 }
 
 .home .profession-box .profession:nth-child(1) i {
     margin-right: 15px;
 }
-
-.home .profession-box .profession:nth-child(2),
-.home .profession-box .profession:nth-child(4) {
-    padding-bottom: 20px;
+.home .profession-box .profession:nth-child(2) {
+    padding-left: 30px;
 }
+
+.home .profession-box .profession:nth-child(3) {
+    padding-bottom: 20px;
+} 
 
 .home .profession i {
     font-size: 3.8rem;
