@@ -451,6 +451,34 @@ span {
     opacity: 1;
 }
 
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.icon-github {
+  font-size: 4rem;
+  color: var(--white-color);
+  transition: transform 0.2s, color 0.2s;
+}
+
+.icon-youtube {
+  font-size: 4rem;
+  color: red;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.icon-github:hover {
+  color: #4078c0; /* xanh GitHub */
+  transform: scale(1.2);
+}
+
+.icon-youtube:hover {
+  color: #ff0000; /* đỏ YouTube */
+  transform: scale(1.2);
+}
+
+
 .portfolio-layer h4 {
     font-size: 3rem;
 }
